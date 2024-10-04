@@ -69,8 +69,8 @@ Docker and Docker Compose installed on your machine.
 An OpenAI API Key. Sign up at OpenAI to obtain one.
  - Clone the Repository : 
 ```bash
-git clone https://github.com/yourusername/financial-research-qa.git
-cd financial-research-qa
+git clone https://github.com/yourusername/investiq-qna-rag.git
+cd investiq-qna-rag
 ```
  - Set Up Environment Variables : Create a .env file in the root directory with the following content:
 ```env
