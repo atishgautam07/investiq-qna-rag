@@ -91,49 +91,6 @@ def generate_actions(model, data, index_name):
 setup_elasticsearch_index(es, index_name, model, all_data)
 
 
-# index_mapping = {
-#     'mappings': {
-#         'properties': {
-#             'source': {'type': 'keyword'},
-#             'chunk_id': {'type': 'keyword'},
-#             'content': {'type': 'text'},
-#             'summary': {'type': 'text'},
-#             'key_topics': {'type': 'text'},
-#             'embedding': {
-#                 'type': 'dense_vector',
-#                 'dims': 384  # Adjust based on your embedding dimensions
-#             }
-#         }
-#     }
-# }
-
-# # Create or update the index
-# print (index_name)
-# if not es.indices.exists(index=index_name):
-#     es.indices.create(index=index_name, body=index_mapping)
-# else:
-#     es.indices.put_mapping(index=index_name, body=index_mapping)
-
-
-# def generate_actions(data):
-#     for item in data:
-#         embedding = model.encode(item['content']).tolist()  #get_embeddings(item['content']).tolist() #
-#         yield {
-#             '_index': index_name,
-#             '_id': item['chunk_id'],
-#             '_source': {
-#                 'source': item['source'],
-#                 'chunk_id': item['chunk_id'],
-#                 'content': item['content'],
-#                 'summary': item.get('summary', ''),
-#                 'key_topics': item.get('key_topics', ''),
-#                 'embedding': embedding
-#             }
-#         }
-
-# # Bulk index the data
-# bulk(es, generate_actions(all_data))
-
 
 def hybrid_search(query, index=index_name, keyword_top_k=10, final_top_k=10):
     """
