@@ -1,11 +1,8 @@
 import os
-import json
 import time
-
 from dotenv import load_dotenv
 from openai import OpenAI
 from tqdm import tqdm
-
 from elasticsearch import Elasticsearch
 from elasticsearch.helpers import bulk
 from elastic_transport import ConnectionError
