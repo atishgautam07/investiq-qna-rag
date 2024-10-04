@@ -3,7 +3,8 @@ A comprehensive Question and Answer application powered by Retrieval-Augmented G
 
 In the rapidly evolving field of finance, staying updated with the latest research is crucial. This application bridges the gap by providing a user-friendly interface to query a curated knowledge base of financial research papers. Utilizing NLP techniques and large language models (LLMs), the app delivers precise answers to user questions, enhancing accessibility to complex financial insights.
 
-![What can you help me with?](image/Snapshot_1.png) ![Why do stock prices go up or down ?](image/Snapshot_2.png) ![Explain Opening Range Breakout (ORB) Strategy in detail](image/Snapshot_3.png) ![How can understanding volume be beneficial in maximizing trading profits ?](image/Snapshot_4.png) ![How behavioral strategies and psychological factors influence financial decision-making ?](image/Snapshot_5.png)
+### Snapshots from the app.
+![What can you help me with?](image/Snapshot_1.png) ![Why do stock prices go up or down ?](image/Snapshot_2.png) ![How can understanding volume be beneficial in maximizing trading profits ?](image/Snapshot_4.png)
 
 ## Architecture Overview
  - Data Ingestion: Research papers are preprocessed, chunked, and embedded using domain-specific embedding models.
@@ -19,16 +20,16 @@ In the rapidly evolving field of finance, staying updated with the latest resear
  - Programming Language: Python 3.10
  - Front-end: Streamlit
  - Back-end:
-  - Language Models: OpenAI GPT-4o-mini (also tested GPT-4o and GPT-3.5 Turbo)
-  - Embedding Models: Sentence Transformers (all-MiniLM-L6-v2, FinLang/finance-embeddings-investopedia, philschmid/bge-base-financial-matryoshka)
+    - Language Models: OpenAI GPT-4o-mini (also tested GPT-4o and GPT-3.5 Turbo)
+    - Embedding Models: Sentence Transformers (all-MiniLM-L6-v2, FinLang/finance-embeddings-investopedia, philschmid/bge-base-financial-matryoshka)
  - Databases:
-  - Elasticsearch: For text search and retrieval
-  - PostgreSQL: For storing conversations and feedback
+    - Elasticsearch: For text search and retrieval
+    - PostgreSQL: For storing conversations and feedback
  - Containerization: Docker & Docker Compose
  - Others:
-  - Psycopg2: PostgreSQL adapter for Python
-  - Elasticsearch Python Client
-  - OpenAI Python SDK
+    - Psycopg2: PostgreSQL adapter for Python
+    - Elasticsearch Python Client
+    - OpenAI Python SDK
 
 ## Evaluation and Performance
 ### Retrieval Evaluation
@@ -66,13 +67,12 @@ We conducted extensive testing of the retrieval component to ensure the most rel
 ### Prerequisites
 Docker and Docker Compose installed on your machine.
 An OpenAI API Key. Sign up at OpenAI to obtain one.
- - Clone the Repository
+ - Clone the Repository : 
 ```bash
 git clone https://github.com/yourusername/financial-research-qa.git
 cd financial-research-qa
 ```
- - Set Up Environment Variables
-Create a .env file in the root directory with the following content:
+ - Set Up Environment Variables : Create a .env file in the root directory with the following content:
 ```env
 # PostgreSQL Configuration
 DB_HOST=db
@@ -89,16 +89,13 @@ ELASTICSEARCH_PORT=9200
 OPENAI_API_KEY=your_openai_api_key
 ```
 Note: Replace the placeholders with your actual credentials.
- - Prepare Data
-Place your financial research papers (PDF format) in the data/ directory.
+ - Prepare Data : Place your financial research papers (PDF format) in the data/ directory.
 
- - Build and Run the Application
-Use Docker Compose to build and start all services:
+ - Build and Run the Application : Use Docker Compose to build and start all services:
 ```bash
 docker-compose up --build
 ```
- - Access the Application
-Open your web browser and navigate to:
+ - Access the Application : Open your web browser and navigate to:
 ```
 http://localhost:8501
 ```
