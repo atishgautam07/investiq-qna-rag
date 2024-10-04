@@ -1,0 +1,30 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+openai = "*"
+scikit-learn = "*"
+pandas = "*"
+streamlit = "*"
+nltk = "*"
+gensim = "*"
+pypdf2 = "*"
+elasticsearch = "*"
+sentence-transformers = "*"
+psycopg2-binary = "*"
+python-dotenv = "*"
+pycryptodome = "*"
+matplotlib = "*"
+
+[dev-packages]
+tqdm = "*"
+notebook = "==7.1.2"
+ipywidgets = "*"
+requests = "*"
+beautifulsoup4 = "*"
+pdfplumber = "*"
+
+[requires]
+python_version = "3.10"
